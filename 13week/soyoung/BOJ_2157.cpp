@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -18,15 +19,15 @@ int main() {
 		if (a < b) arr[a].push_back({ b, c });
 	}
 
-	for (int i = 0; i < arr[1].size(); i++) 
+	for (int i = 0; i < arr[1].size(); i++)
 		dp[arr[1][i].first][2] = max(dp[arr[1][i].first][2], arr[1][i].second);
 
-	for (int i = 2; i <= n; i++) 
-		for (int j = 1; j <= m; j++) 
-			if (dp[i][j]) 
-				for (int k = 0; k < arr[i].size(); k++) 
+	for (int i = 2; i <= n; i++)
+		for (int j = 1; j <= m; j++)
+			if (dp[i][j])
+				for (int k = 0; k < arr[i].size(); k++)
 					dp[arr[i][k].first][j + 1] = max(dp[arr[i][k].first][j + 1], dp[i][j] + arr[i][k].second);
-				
+
 	int res = 0;
 	for (int i = 2; i <= m; i++) res = max(res, dp[n][i]);
 	cout << res;
