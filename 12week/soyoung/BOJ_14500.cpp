@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -125,12 +126,12 @@ int main() {
 	cin>>n>>m;
 	for (int i=0;i<n;i++)
 		for (int j=0;j<m;j++) cin>>arr[i][j];
-	
+
 	l1();l2();
 	nemo();
 	L1();L2();L3();L4();L5();L6();L7();L8();
 	z1();z2();z3();z4();
 	T1();T2();T3();T4();
-	
+
 	cout<<ma;
 }
