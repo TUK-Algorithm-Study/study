@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,7 +20,7 @@ void DFS(int node) {
 }
 
 string check() {
-	for (int i = 1; i <= node; i++) 
+	for (int i = 1; i <= node; i++)
 		for (int j = 0; j < v[i].size(); j++)
 			if (visit[i] == visit[v[i][j]]) return "NO\n";
 	return "YES\n";
