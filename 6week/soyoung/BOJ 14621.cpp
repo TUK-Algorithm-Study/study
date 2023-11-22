@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -10,7 +11,7 @@ char uni[1001];
 void prim() {
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 	pq.push({0, 1});
-	
+
 	while (!pq.empty()) {
 		pair<int, int> edge = pq.top();
 		pq.pop();
@@ -21,7 +22,7 @@ void prim() {
 		res += edge.first;
 
 		for (int i = 0; i < road[edge.second].size(); i++)
-			if (!visit[road[edge.second][i].second]) 
+			if (!visit[road[edge.second][i].second])
 				pq.push({road[edge.second][i].first, road[edge.second][i].second});
 	}
 }
