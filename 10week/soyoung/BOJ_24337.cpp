@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -18,7 +19,7 @@ int main() {
 	arr[n - b + 1] = max(a, b);
 
 	int index = n - b;
-	for (int i = a - 1; i > 0; i--) 
+	for (int i = a - 1; i > 0; i--)
 		arr[index--] = i;
 
 	index = n;
