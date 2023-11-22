@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -7,7 +8,7 @@ int score[16];
 int board[16][16];
 
 void kill(int num) {
-	for (int i = 0; i < n; i++) 
+	for (int i = 0; i < n; i++)
 		if (score[i]) score[i] += board[num][i];
 	score[num] = 0;
 
@@ -47,8 +48,8 @@ int main() {
 
 	for (int i = 0; i < n; i++) cin >> score[i];
 
-	for (int i = 0; i < n; i++) 
-		for (int j = 0; j < n; j++) 
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
 			cin >> board[i][j];
 
 	cin >> mafia;
