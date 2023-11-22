@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,11 +12,11 @@ public class Main {
         String b = br.readLine();
 
         Stack<Character> st = new Stack<>();
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             st.push(c);
-            
+
             if (st.size() >= b.length() && c == b.charAt(b.length() - 1)) {
                 boolean found = true;
                 for (int j = 0; j < b.length(); j++) {
@@ -24,7 +25,7 @@ public class Main {
                         break;
                     }
                 }
-                
+
                 if (found) {
 
                     for (int j = 0; j < b.length(); j++) {
