@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -26,7 +27,7 @@ int main() {
 		while (three[2]) {
 			grow[index++] += 2;
 			three[2]--;
-		}			
+		}
 	}
 
 	int index = 0;

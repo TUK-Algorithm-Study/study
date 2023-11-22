@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -6,7 +7,7 @@ bool board[40][40];
 bool sticker[10][10];
 
 bool check(int r, int c) {
-	for (int i = 0; i < sr; i++) 
+	for (int i = 0; i < sr; i++)
 		for (int j = 0; j < sc; j++)
 			if (sticker[i][j] && board[i + r][j + c]) return false;
 	return true;
@@ -20,7 +21,7 @@ void board_attach(int r, int c) {
 
 bool attach() {
 	for (int i = 0; i <= r - sr; i++) {
-		for (int j = 0; j <= c - sc; j++) {			
+		for (int j = 0; j <= c - sc; j++) {
 			if (!check(i, j)) continue;
 
 			board_attach(i, j);
@@ -32,7 +33,7 @@ bool attach() {
 
 void rotate() {
 	int tmp[10][10];
-	for (int i = 0; i < sr; i++) 
+	for (int i = 0; i < sr; i++)
 		for (int j = 0; j < sc; j++)
 			tmp[j][sr - i - 1] = sticker[i][j];
 
