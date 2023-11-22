@@ -76,6 +76,7 @@ public class Main {
         }
 
         System.out.println(count[n][n]);
+
     }
 }
 class Point{
